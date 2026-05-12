@@ -278,7 +278,7 @@ with st.sidebar:
 
     st.markdown("---")
     if api_ok:
-        if st.button("🌱 Seed Sample Data"):
+        if st.button("Seed Sample Data"):
             result = api_post("/seed")
             if result and result.get("seeded"):
                 st.success("Sample data seeded!")
@@ -291,7 +291,7 @@ with st.sidebar:
     if st.session_state.get("logged_in"):
         st.markdown("---")
         st.markdown(f"<span style='font-size:0.8rem;color:#6b7280;'>Logged in as <b style='color:#e8eaf0;'>{st.session_state.get('username','')}</b> ({st.session_state.get('role','')})</span>", unsafe_allow_html=True)
-        if st.button("🚪 Log Out", use_container_width=True):
+        if st.button("Log Out", use_container_width=True):
             st.session_state.clear()
             st.rerun()
 
@@ -387,7 +387,7 @@ if page == "Live Feed":
                         align-items:center;justify-content:center;
                         color:#6b7280;font-family:'Space Mono',monospace;
                         font-size:0.85rem;letter-spacing:0.05em;">
-                <div style="font-size:3rem;margin-bottom:12px;">📷</div>
+                <div style="font-size:3rem;margin-bottom:12px;"></div>
                 <div>CAMERA FEED</div>
                 <div style="font-size:0.7rem;margin-top:6px;color:#444;">No cameras configured yet</div>
             </div>
@@ -414,7 +414,7 @@ if page == "Live Feed":
                 </div>
                 """, unsafe_allow_html=True)
         else:
-            st.caption("No events yet. Use 🌱 Seed Sample Data in the sidebar.")
+            st.caption("No events yet. Use Seed Sample Data in the sidebar.")
 
 # PAGE: EVENT HISTORY
 elif page == "Event History":
@@ -506,7 +506,7 @@ elif page == "Smart Zones":
 
     st.markdown("""
     <div class="info-box">
-        📌 Zones define regions in the camera frame. Select a camera to preview its stream
+        Zones define regions in the camera frame. Select a camera to preview its stream
         and configure zones for it. Coordinates are <b>normalized (0.0–1.0)</b> relative to frame width/height.
     </div>
     """, unsafe_allow_html=True)
@@ -642,7 +642,7 @@ elif page == "Cameras":
 
     st.markdown("""
     <div class="info-box">
-        📷 Add camera streams here. Each stream URL should point to a running
+        Add camera streams here. Each stream URL should point to a running
         <code>sentinel_camera.py</code> instance. They will appear as a grid on the Live Feed page.
     </div>
     """, unsafe_allow_html=True)
@@ -790,7 +790,7 @@ elif page == "Settings":
                                step=0.01,
                                help="Minimum GCP Vision confidence to count as a real detection.")
 
-    if st.button("💾 Save Detection Settings"):
+    if st.button("Save Detection Settings"):
         import json
         with open(settings_path, "w") as f:
             json.dump({
@@ -843,7 +843,7 @@ elif page == "Settings":
 
     # Verify credentials button
     if os.path.exists(creds_path):
-        if st.button("🔍 Verify GCP Vision Connection"):
+        if st.button("Verify GCP Vision Connection"):
             try:
                 from google.cloud import vision
                 # Must set the env var in this process before initialising the client
