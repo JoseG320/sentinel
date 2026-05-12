@@ -4,7 +4,7 @@ Sentinel – Detection Pipeline
 Captures frames from the camera stream, runs GCP Vision object detection,
 checks zone overlap, and writes events + snapshots to the database.
 
-Run alongside all of the other python files:
+Run alongside sentinel_api and sentinel.py:
     python3 sentinel_detect.py
 """
 

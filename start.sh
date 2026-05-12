@@ -1,7 +1,9 @@
 #!/bin/bash
 # Sentinel – Start Script (macOS / Linux)
 # Runs sentinel_detect.py and sentinel.py concurrently.
-# Usage: ./start.sh
+# Usage: 
+# chmod +x start.sh
+# ./start.sh
 
 VENV_DIR=".venv"
 REQUIREMENTS="requirements.txt"

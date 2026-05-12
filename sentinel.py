@@ -12,7 +12,10 @@ To run sentinel_api.py:
     uvicorn sentinel_api:app --port 8000
 
 To run sentinel_detect.py:
+    python3 sentinel_detect.py
 
+To make things simpler, use the start.sh script to start up
+everything at once. It handles the virtual enviroment as well.
 """
 
 import streamlit as st

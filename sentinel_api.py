@@ -12,6 +12,8 @@ Run with:
 
 Docs available at:
     http://localhost:8000/docs
+
+The docs are also available in the app's settings page.
 """
 
 from fastapi import FastAPI, HTTPException
