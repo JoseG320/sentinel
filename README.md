@@ -42,7 +42,7 @@ sentinel_camera.py ─────────────► sentinel_detect.py
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/DSC333-Sentinel/sentinel.git
 cd sentinel
 ```
 
